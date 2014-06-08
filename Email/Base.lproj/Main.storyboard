@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AcG-p4-jYR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Email View Controller-->
+        <scene sceneID="5Kv-OK-GIW">
+            <objects>
+                <viewController id="qYj-F3-w11" customClass="EmailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M8h-bM-bVa"/>
+                        <viewControllerLayoutGuide type="bottom" id="MyQ-aD-dE2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eqo-UG-5Nm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLg-52-9w3">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRr-LA-iTr">
+                                <rect key="frame" x="67" y="84" width="186" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="34"/>
+                                <state key="normal" title="Write">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="composeButtonPressed:" destination="qYj-F3-w11" eventType="touchUpInside" id="1c8-UK-3QU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="bgT-Uf-ihY">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-80"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="imageView" destination="HLg-52-9w3" id="R0B-kf-dqU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBF-Tz-eR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="162"/>
+        </scene>
+        <!--My Tab Bar Controller-->
+        <scene sceneID="blA-Pg-Cbq">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="AcG-p4-jYR" customClass="MyTabBarController" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="FR2-B4-iPB">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ycy-W3-MtP" kind="relationship" relationship="viewControllers" id="Sjv-kh-f36"/>
+                        <segue destination="qYj-F3-w11" kind="relationship" relationship="viewControllers" id="NTa-ZR-wvs"/>
+                        <segue destination="BMS-Vi-8I9" kind="relationship" relationship="viewControllers" id="6g1-52-k37"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGC-63-xB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474" y="-232"/>
+        </scene>
+        <!--Recipient View Controller-->
+        <scene sceneID="ZOE-oz-i1E">
+            <objects>
+                <viewController id="ycy-W3-MtP" customClass="RecipientViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bd7-di-lkX"/>
+                        <viewControllerLayoutGuide type="bottom" id="SyN-EI-0KE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LmX-H2-WM6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j3R-NB-a1J">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="574"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-QJ-BfV">
+                                <rect key="frame" x="17" y="121" width="287" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="34"/>
+                                <state key="normal" title="Get Recipients">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="composeButtonPressed:" destination="qYj-F3-w11" eventType="touchUpInside" id="kDx-5j-Qsr"/>
+                                    <action selector="getAddressButtonPressed:" destination="ycy-W3-MtP" eventType="touchUpInside" id="dlC-hm-1T3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.mpms.org/node/3290" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ky5-nN-FcV">
+                                <rect key="frame" x="23" y="71" width="401" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-Pq-XI5">
+                                <rect key="frame" x="21" y="266" width="280" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m68-tL-NOq">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsM-Gh-5a2">
+                                <rect key="frame" x="113" y="25" width="94" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <state key="normal" title="Paste">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pasteButtonPressed:" destination="ycy-W3-MtP" eventType="touchUpInside" id="Tdl-tj-e7c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="DwM-IG-Mxy">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-20"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="addressesTextField" destination="m68-tL-NOq" id="XVQ-xR-FW0"/>
+                        <outlet property="imageView" destination="j3R-NB-a1J" id="ue6-Mt-gzs"/>
+                        <outlet property="scrollView" destination="OA9-Pq-XI5" id="QT5-Ef-V9T"/>
+                        <outlet property="urlTextField" destination="Ky5-nN-FcV" id="2im-op-aKi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJa-Mj-bzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="-536"/>
+        </scene>
+        <!--Web Browser View Controller-->
+        <scene sceneID="pZz-8V-3Ck">
+            <objects>
+                <viewController id="BMS-Vi-8I9" customClass="WebBrowserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wjK-eI-3il"/>
+                        <viewControllerLayoutGuide type="bottom" id="waU-tV-7dL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1P7-X4-le2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGM-Ed-CmL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="dcf-Wf-rWN"/>
+                    <connections>
+                        <outlet property="webView" destination="eGM-Ed-CmL" id="XFR-hv-xmA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0un-Ua-wns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="812"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

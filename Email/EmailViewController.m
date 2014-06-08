@@ -59,17 +59,14 @@
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     picker.mailComposeDelegate = self;
 
-    [picker setSubject:@"A warning from a friend"];
+    [picker setSubject:@"Hello from the internet."];
 
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *descriptors = [NSArray arrayWithObject:descriptor];
-    NSArray *toRecipients = [NSArray arrayWithObject:@"michaelosnowden@gmail.com"];
     NSArray *bccRecipients = [recipients sortedArrayUsingDescriptors:nil];
-
-    [picker setToRecipients:toRecipients];
     [picker setBccRecipients:bccRecipients];
 
-    NSString *emailBody = @"Your pants are on fire.";
+    NSString *emailBody = @"Welcome to the internet!";
     [picker setMessageBody:emailBody isHTML:NO];
 
     [self presentViewController:picker animated:YES completion:nil];
